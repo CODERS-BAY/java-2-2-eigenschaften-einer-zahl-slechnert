@@ -2,7 +2,7 @@ package com.coders.bay;
 
 import java.util.Scanner;
 
-public class zahleneigenschaften {
+public class Zahleneigenschaften {
     public static void main(String[] args) {
 
         int num;
@@ -32,10 +32,17 @@ public class zahleneigenschaften {
         }
         //Länge 2 checken
         int length = String.valueOf(num).length();
-        if (length == 2) {
-            System.out.println("Die Zahl ist zweistellig!");
-        } else {
-            System.out.println("Die Zahl hat " + length + " Stellen!");
+        if (num < 0) {
+            length -= 1;
+            if (length == 2) {
+                System.out.println("Die Zahl ist zweistellig!");
+            } else if (length == 1) {
+                System.out.println("Die Zahl hat " + length + " Stelle!");
+            } else {
+                System.out.println("Die Zahl hat " + length + " Stellen!");
+            }
         }
     }
+
+
 }
